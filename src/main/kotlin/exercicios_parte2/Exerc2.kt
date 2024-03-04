@@ -1,12 +1,13 @@
 package exercicios_parte2
 
-//Exercício: cálculo da áreaa dos triângulos: equilátero, retângulo e isósceles
+//Exercício 2: cálculo da áreaa dos triângulos: equilátero, retângulo e isósceles
 
-
+//Fórmula: (b * a)/2
 fun isosceles(b: Double, a: Double): Double{
     return (b * a)/2
 }
 
+// Fórmula: (lado² * √3)/ 4
 fun equilatero(ladoTri: Double): Double{
 
     val area = (ladoTri * ladoTri * Math.sqrt(3.0) / 4.0)
@@ -14,7 +15,8 @@ fun equilatero(ladoTri: Double): Double{
 
 }
 
-fun retangulo(cateto1: Double, cateto2: Double): Double{
+//Fórmula: (cateto1 * cateto2)/2
+fun triretangulo(cateto1: Double, cateto2: Double): Double{
     val area = (cateto1 * cateto2)/2
     return area
 }
@@ -57,7 +59,7 @@ fun main(){
         print("Insira o valor do 2º cateto do triângulo: ")
         val cat2 = readLine()!!.toDouble()
 
-        val area = retangulo(cat1, cat2)
+        val area = triretangulo(cat1, cat2)
 
         println("A área do triângulo retângulo é: $area")
     }
