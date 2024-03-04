@@ -1,4 +1,4 @@
-package Exercicios_parte2
+package exercicios_parte2
 
 //Exercício: calcular a área do retângulo
 
