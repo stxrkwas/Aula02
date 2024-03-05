@@ -10,7 +10,7 @@ fun isosceles(b: Double, a: Double): Double{
 // Fórmula: (lado² * √3)/ 4
 fun equilatero(ladoTri: Double): Double{
 
-    val area = (ladoTri * ladoTri * Math.sqrt(3.0) / 4.0)
+    val area = ((ladoTri * ladoTri) * Math.sqrt(3.0)) / 4.0
     return area
 
 }
