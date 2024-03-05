@@ -1,48 +1,6 @@
 package extras_teste
 
 //Teste: todos os códigos em um só, baseado no exercício 2;
-
-//Opção 1 - Retângulo
-fun retangulo(b: Double, a: Double): Double {
-    return b * a
-}
-
-// Opção 2.1 - Triângulo Isósceles
-fun isosceles(b: Double, a: Double): Double{
-    return (b * a)/2
-}
-
-//Opção 2.2 - Triângulo Equilátero
-fun equilatero(ladoTri: Double): Double{
-
-    val area = ((ladoTri * ladoTri) * Math.sqrt(3.0)) / 4.0
-    return area
-
-}
-
-//Opção 2.3 - Triângulo Retângulo
-fun triretangulo(cateto1: Double, cateto2: Double): Double{
-    val area = (cateto1 * cateto2)/2
-    return area
-}
-
-//Opção 3 - Círculo
-fun circunferencia(raio: Double): Double{
-    val circ = Math.PI * (raio * raio)
-    return circ
-}
-
-//Opção 4 - Losango
-fun losango(dmaior: Double, dmenor: Double): Double{
-    val area = (dmaior * dmenor)/2
-    return area
-}
-
-//Opção 5 - Trapézio
-fun trapezio(a: Double, b: Double, h: Double): Double{
-    val area = ((a + b) * h)/2
-    return area
-}
 fun main() {
 
     print("Qual área deseja calcular: \n 1 - Retângulo \n 2 - Triângulo  \n 3 - Circulo \n 4 - Losango \n 5 - Trapézio \n")
@@ -67,7 +25,7 @@ fun main() {
     //Opção 2 - Triângulo
     else if (opcao == 2) {
 
-        println("De qual triângulo deseja calcular a área: \n 2.1 - Triângulo Isósceles \n 2.2- Triangulo Equilátero \n 2.3 - Triângulo Retângulo \n")
+        println("De qual triângulo deseja calcular a área: \n 2.1 - Triângulo Isósceles \n 2.2- Triangulo Equilátero \n 2.3 - Triângulo Retângulo \n 2.4 - Triângulo Escaleno \n")
         val subopcao = readLine()!!.toDouble()
 
         //2.1 - Triângulo Isósceles
@@ -109,6 +67,22 @@ fun main() {
 
             println("A área do triângulo retângulo é: $area")
 
+        }
+
+        else if(subopcao == 2.4){
+
+            print("Insira o valor do lado A do triângulo: ")
+            val a = readLine()!!.toDouble()
+
+            println("Insira o valor do lado B do triângulo: ")
+            val b = readLine()!!.toDouble()
+
+            println("Insira o valor do lado C do triângulo: ")
+            val c = readLine()!!.toDouble()
+
+            val area = exercicios_parte2.escaleno(a, b, c)
+
+            println("A área do triângulo escaleno é: $area")
         }
 
         else{
