@@ -21,9 +21,16 @@ fun triretangulo(cateto1: Double, cateto2: Double): Double{
     return area
 }
 
+fun escaleno(base: Double, altura: Double): Double{
+
+    val area = (base * altura)/2
+    return area
+
+}
+
 fun main(){
 
-    print("De qual triângulo deseja calcular a área: \n 1 - Triângulo Isósceles \n 2 - Triangulo Equilátero \n 3 - Triângulo Retângulo \n")
+    print("De qual triângulo deseja calcular a área: \n 1 - Triângulo Isósceles \n 2 - Triangulo Equilátero \n 3 - Triângulo Retângulo \n 4 - Triâbgulo Escaleno")
 
     val opcao = readLine()!!.toInt()
 
@@ -62,6 +69,20 @@ fun main(){
         val area = triretangulo(cat1, cat2)
 
         println("A área do triângulo retângulo é: $area")
+    }
+
+    else if(opcao == 4){
+
+        print("Insira a base do triângulo: ")
+        val b = readLine()!!.toDouble()
+
+        println("Insira a altura do triângulo: ")
+        val alt = readLine()!!.toDouble()
+
+        val area = isosceles(b, alt)
+
+        println("A área do triângulo isósceles é: $area")
+
     }
 
     else {

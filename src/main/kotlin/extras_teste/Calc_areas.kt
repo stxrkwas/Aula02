@@ -15,7 +15,7 @@ fun isosceles(b: Double, a: Double): Double{
 //Opção 2.2 - Triângulo Equilátero
 fun equilatero(ladoTri: Double): Double{
 
-    val area = (ladoTri * ladoTri * Math.sqrt(3.0) / 4.0)
+    val area = ((ladoTri * ladoTri) * Math.sqrt(3.0)) / 4.0
     return area
 
 }
